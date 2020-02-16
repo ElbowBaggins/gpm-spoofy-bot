@@ -33,8 +33,7 @@ class GsbClient(Client):
                     else:
                         await message.channel.send('https://open.spotify.com/track/5rfJ2Bq2PEL8yBjZLzouEu')
 
-    def run(self, *args, **kwargs):
-        extended_args = [GsbClient.TOKEN] + list(args)
-        return Client.run(self, *extended_args, kwargs)
+    def run(self):
+        return Client.run(self, GsbClient.TOKEN)
 
 
